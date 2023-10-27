@@ -6,11 +6,12 @@
     */
 
     //Entrada
-
-
+   let numero = Number(prompt("me diga um numero de 1 a 10").trim().replace(",","."))
     //Processamento
-
+    while (numero < 1 || numero > 10 || isNaN(numero)) {
+        numero = Number(prompt(`Insira um número entre 1 e 10:`));
+    }
 
     //Saída
-
+    alert(`O número inserido foi ${numero}!`);
 </script>

@@ -11,11 +11,37 @@
     */
 
     //Entrada
+let nome = prompt("me diga seu nome")
+let idade =Number( prompt("qual sua idade"))
+let salario = Number( prompt("qual seu salario"))
+ let sexo = prompt("me diga seu sexo (f para feminino e m para masculino)")
+ let civil = prompt("qua seu estado civil (s para solteiro c para casado v para viuvo e d para divorciado )")
+
+while (nome.length <= 3){
+    nome = prompt("me diga seu nome com mais de 3 caracteres")
+}
+while (idade = 1 && idade >= 150){
+    idade = prompt("me diga uma idade entre 0 a 150");
+}
+while (salario <= 0){
+    salario = prompt("me diga um salario maior de ");
+}
+while(sexo != "f" && sexo != "m"){
+    sexo = prompt("me diga seu sexo (f para feminino e m para masculino)")
+}
 
 
-    //Processamento
+while(civil != "s" && civil!= "c" && civil != "v" && civil != "d"){
+
+   civil = prompt("qua seu estado civil (s para solteiro c para casado v para viuvo e d para divorciado )")
+}
 
 
     //Saída
-
+alert(`suas dados são:\n
+nome ${nome}\n
+idade ${idade}\n
+salario ${salario}\n
+sexo ${sexo}\n
+seu estado civil ${civil}`)
 </script>

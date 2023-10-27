@@ -20,13 +20,51 @@
     */
 
     //Entrada
-
-
+    let J = 0
+    let M = 0
+    let N = 0
+    let B = 0
+    let contador = 0
+    const qtd = parseInt(prompt(`quantas pessoas votaram?`))
+    
     //Processamento
+   
+    while (contador < qtd) {
 
+        const votos = parseInt(prompt(`em quem voce votara: 1-Joãozinho 2-Mariazinha 3-Nulo 4-Branco`))
+        contador++
+
+        if (votos !== 1 && votos !== 2 && votos !== 3 && votos !== 4) {
+            alert(`INFORME O VALOR CERTO`)
+            contador--
+        }
+
+        if (votos === 1) {
+            J++
+        }
+        else if (votos === 2) {
+            M++
+        }
+        else if (votos === 3) {
+            N++
+        }
+        else {
+            B++
+        }
+    }
+
+    if (J > M ) {
+        alert(`o candidato vencedor foi: Joãozinho com ${J} votos \nMariazinha recebeu ${M} votos \nos votos nulos deram: ${(N / qtd) * 100}% \ne os votos em branco deram: ${(B / qtd) * 100}%`)
+    }
+    else if (M > J){
+        alert(`o candidato vencedor foi: Mariazinha com ${M} votos \n joãozinho recebeu ${J} votos \nos votos nulos deram: ${(N / qtd) * 100}% \ne os votos em branco deram: ${(B / qtd) * 100}%`)
+
+    }
+    else{
+        alert(`empate: Mariazinha com ${M} votos \n joãozinho recebeu ${J} votos \nos votos nulos deram: ${(N / qtd) * 100}% \ne os votos em branco deram: ${(B / qtd) * 100}%`)
+
+    }
 
     //Saída
 
 </script>
-
-
